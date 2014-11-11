@@ -1,0 +1,23 @@
+\section{Bounce bounce}
+
+\subsection{A FIR filter based delay of 30ms}
+has the equation:
+\begin{equation}
+y[n] = x[n] + \alpha x[n - delay_s]
+\end{equation}
+Where $x[n]$ is the input, $y[n]$ the output, $\alpha$ is some dampening
+coefficient and $delay_s$ is the delay in number of samples
+corresponding in a delay of $delay$ seconds, where
+\begin{equation}
+delay_s = \mbox{round}(f_s \cdot delay )
+\end{equation}
+and $f_s$ is the sampling frequency.
+
+This gives the transfer function:
+\begin{equation}
+H(z) = \frac{z^{-delay_s} + \alpha}{ 1 }
+\end{equation}
+
+
+\stdfignoscale{firDelay30imp.eps}{some text}{fig:fir30imp}
+\stdfignoscale{firDelay30freq.eps}{some text}{fig:fir30freq}

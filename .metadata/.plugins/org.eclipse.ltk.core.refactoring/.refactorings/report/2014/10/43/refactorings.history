@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;firDelay30freq.eps&apos; to &apos;picture&apos;" description="Move &apos;firDelay30freq.eps&apos; to &apos;picture&apos;" destination="picture" element1="picture/pics/firDelay30freq.eps" element2="picture/pics/firDelay30imp.eps" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="2" stamp="1413915640739" updateReferences="true"/>
+</session>

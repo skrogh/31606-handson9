@@ -1,0 +1,4 @@
+\section{ Bounce bounce }
+
+\stdfignoscale{firDelay30imp.eps}{some text}{fig:fir30imp}
+\stdfignoscale{firDelay30freq.eps}{some text}{fig:fir30freq}

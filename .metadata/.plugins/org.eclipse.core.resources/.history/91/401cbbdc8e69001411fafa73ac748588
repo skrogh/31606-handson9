@@ -1,0 +1,20 @@
+\subsection{Like a hot knive through a Butterworth}
+
+We are asked to design a filter meeting the following requirements:
+\begin{itemize}
+  \item Passband from 0.2 to 0.3
+  \item Stopbands from 0 to 0.1 ad 0.4 to 1
+  \item Rippels in passband no greater than 2dB
+  \item Stopband attenuation min. 100dB
+\end{itemize}
+
+While the headline does imply that a butterworth filter could be used, this
+does not allow us to utilize that rippels in both the stop and passband are
+accepted.
+
+\stdfig{1}{1-1-cut-window-fresponse}{ blablabla }{1-1-cut-window-fresponse}
+\stdfig{1}{1-1-cut-fresponse}{ blablabla }{1-1-cut-fresponse}
+\stdfig{1}{1-1-uncut-fresponse.}{ blablabla }{1-1-uncut-fresponse}
+\stdfig{1}{1-1-cut-fresponse}{ blablabla }{1-1-cut-fresponse}
+\stdfig{1}{1-1-uncut-impresponse}{ blablabla }{1-1-uncut-impresponse}
+\stdfig{1}{1-1-uncut-zplane}{ blablabla }{1-1-uncut-zplane}

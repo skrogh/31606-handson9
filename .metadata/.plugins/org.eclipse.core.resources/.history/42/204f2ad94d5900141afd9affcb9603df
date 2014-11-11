@@ -1,0 +1,8 @@
+\input{pre}
+\begin{document}
+\input{frontpage}
+\newpage
+
+\input{2}
+
+\end{document}
