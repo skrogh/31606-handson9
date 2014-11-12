@@ -1,0 +1,31 @@
+\subsection{Like a hot knive through a Butterworth}
+
+We are asked to design a filter meeting the following requirements:
+\begin{itemize}
+  \item Passband from 0.2 to 0.3
+  \item Stopbands from 0 to 0.1 ad 0.4 to 1
+  \item Rippels in passband no greater than 2dB
+  \item Stopband attenuation min. 100dB
+\end{itemize}
+
+While the headline does imply that a butterworth filter could be used, this
+does not allow us to utilize that rippels in both the stop and passband are
+accepted.
+
+We use the \emph{Matlab} filter toolbox to design our filer:
+\begin{lstlisting}[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=none]
+% Construct an FDESIGN object and call its ELLIP method.
+h  = fdesign.bandpass(Fstop1, Fpass1, Fpass2, Fstop2, Astop1, Apass, ...
+                      Astop2);
+Hd = design(h, 'ellip', 'MatchExactly', match);
+\end{lstlisting}
+
+
+\stdfignoscale{1-1-cut-window-fresponse}{ blablabla }{1-1-cut-window-fresponse}
+\stdfignoscale{1-1-cut-fresponse}{ blablabla }{1-1-cut-fresponse}
+\stdfignoscale{1-1-uncut-fresponse}{ blablabla }{1-1-uncut-fresponse}
+\stdfignoscale{1-1-uncut-impresponse}{ blablabla }{1-1-uncut-impresponse}
+\stdfignoscale{1-1-uncut-zplane}{ blablabla }{1-1-uncut-zplane}

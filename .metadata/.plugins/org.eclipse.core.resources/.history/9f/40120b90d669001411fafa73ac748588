@@ -63,11 +63,7 @@ with these impulseresponses as kernes are shown in fig. \ref{1-1-cut-fresponse}
 
 \stdfignoscale{1-1-cut-fresponse}{ blablabla }{1-1-cut-fresponse}
 
-It is quite clear that neither of the filters meet the requirements. As the
-impulse length is shortend there, surprisingly, is not that big of a difference
-in the filter, until somewhere between $40\%$ and $10\%$ of the length.
-
-
+It is quite clear that neither of the filters meet the requirements. 
 
 
 
