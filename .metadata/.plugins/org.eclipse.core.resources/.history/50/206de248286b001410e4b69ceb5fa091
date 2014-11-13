@@ -21,7 +21,7 @@
 \definecolor{MathGreen}{RGB}{82,164,0}
 
 \titleformat{\section}{\normalfont\sffamily\large\bfseries\color{MathGreen}}{}{0pt}{|\kern-0.15ex|\kern-0.15ex|\kern-0.15ex|\presectionnumber{#1}\sectionnum{section}\postsectionnumber{#1}\qquad\quad\midlesection{#1}\label{\sectionnum{section}}}
-\titleformat{\subsection}[runin]{\large\bfseries}{}{10pt}{\sectionnum{section}.\subsectionnum{subsection})~#1\label{\sectionnum{section}\subsectionnum{subsection}}}
+\titleformat{\subsection}[runin]{\large\bfseries}{}{10pt}{\sectionnum{sectio}.\subsectionnum{subsection})~#1\label{\sectionnum{section}\subsectionnum{subsection}}}
 \titleformat{\subsubsection}[runin]{\itshape}{}{0pt}{\subsectionnum{subsection},\subsubsectionnum{subsection}~#1\label{\sectionnum{section}\subsectionnum{subsection}\subsubsectionnum{subsubsection}}}
 %\titleformat{\subsubsection}{\bfseries}{}{0pt}{\alph{subsection}.\arabic{subsubsection})\qquad\quad#1\label{\arabic{section}\alph{subsection}\arabic{subsubsection}}}
 
