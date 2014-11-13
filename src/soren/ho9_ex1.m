@@ -42,7 +42,7 @@ saveas(gcf,'./pics/1-1-uncut-fresponse.eps','psc2')
 
 %impulse response
 m = impz( uncut );
-figure; plot( m )
+figure; plot( m(1:end/3 ) )
 
 xlabel( 'Sample []' )
 ylabel( 'Value []' )
@@ -50,6 +50,7 @@ title( 'Impulse response' )
 set(gca,'Fontsize',10)
 set(gcf,'paperunits','centimeters','Paperposition',[0 0 15 5])
 saveas(gcf,'./pics/1-1-uncut-impresponse.eps','psc2')
+axis tight
 
 
 
@@ -66,7 +67,7 @@ maxrest = uncut_ir;
 for i = 1:length(maxrest)
     maxrest(i) = max( abs( uncut_ir(i:end) ) );
     if maxrest(i) < maxval*sig
-        break;
+        break; %stop here, i is now the index, where all samples [i:inf[ < max
     end
 end
 
@@ -129,7 +130,7 @@ saveas(gcf,'./pics/1-1-cut-fresponse.eps','psc2')
 %% with windows
 
 %make windows
-window = hamming( i*2 );
+window = hann( i*2 );
 window = window( end/2+1:end );
 window_75 = hamming( i*2*0.75 );
 window_75 = window_75( end/2+1:end );
