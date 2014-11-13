@@ -1,0 +1,17 @@
+\input{pre}
+\begin{document}
+\input{frontpage}
+\newpage
+
+\section{How finite should it be?}
+\input{1_1}
+\FloatBarrier
+\input{1_2}
+\FloatBarrier
+\input{DTSR3_v3}
+\FloatBarrier
+\input{3_1}
+%3_2
+
+
+\end{document}

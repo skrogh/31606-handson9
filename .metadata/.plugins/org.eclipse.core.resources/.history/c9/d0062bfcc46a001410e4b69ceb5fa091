@@ -1,0 +1,18 @@
+\subsection{ Granma rolling with Maadlab }
+My bored grandmother fires up \emph{Matlab} and generates a linear sweep from
+$50Hz$ to $5kHz$ with a sampling frequency of $5kHz$.
+
+\subsubsection{ What I  expect to hear }
+Assuming \emph{Matlab} and my soundcard likes eachother and can upsample and
+filter away any frequencies above half the sampling frequency, I expect to hear
+a cosine sweep from $50Hz$ to $2500Hz$ and then (with opposite phase) back again
+from $2500Hz$ to $0Hz$. This sweep has been illustrated in fig.
+\ref{3-1-sweep-fold-brick}.
+
+Now I know that is probably not the case (by listening this is quite easy to
+check). Neither \emph{Matlab} or my soundcard has a brickwall lowpass filter at
+$2500Hz$, so what I hear is actually multipe sweeps moving up and down. The
+audible range of the first $25\%$ of the sweep is illustrated in fig
+\ref{3-1-sweep-fold-nofilt}. Or with a zero order hold \emph{DAC}:
+\ref{3-1-sweep-fold-zero}.
+

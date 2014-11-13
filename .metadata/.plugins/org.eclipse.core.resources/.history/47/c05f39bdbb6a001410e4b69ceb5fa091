@@ -1,0 +1,78 @@
+\subsection{Like a hot knive through a Butterworth}
+
+We are asked to design a filter meeting the following requirements:
+\begin{itemize}
+  \item Passband from 0.2 to 0.3
+  \item Stopbands from 0 to 0.1 ad 0.4 to 1
+  \item Rippels in passband no greater than 2dB
+  \item Stopband attenuation min. 100dB
+\end{itemize}
+
+While the headline does imply that a butterworth filter could be used, this
+does not allow us to utilize that rippels in both the stop and passband are
+accepted.
+
+We use the \emph{Matlab} filter toolbox to design our filer:
+\begin{lstlisting}[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=none]
+% Construct an FDESIGN object and call its ELLIP method.
+h  = fdesign.bandpass(Fstop1, Fpass1, Fpass2, Fstop2, Astop1, Apass, ...
+                      Astop2);
+Hd = design(h, 'ellip', 'MatchExactly', match);
+\end{lstlisting}
+
+Pole-Zero plot of the filter can be seen in fig. \ref{1-1-uncut-zplane},
+frequency response (and specification boundaries) can be found in fig.
+\ref{1-1-uncut-fresponse} and impulse response in fig.
+\ref{1-1-uncut-impresponse}
+
+\stdfignoscale{1-1-uncut-zplane}{ blablabla }{1-1-uncut-zplane}
+\stdfignoscale{1-1-uncut-fresponse}{ cornerfreq: 0.3004, 1.997
+}{1-1-uncut-fresponse}
+\stdfignoscale{1-1-uncut-impresponse}{ blablabla }{1-1-uncut-impresponse}
+
+We find that point $i$ in the impulse response where the maximum amplitude is
+below a value of $10\%$ of the maximum amplitude of the whole signal so that:
+\begin{equation*}
+x[0:\inf] * 10\% > x[i:\inf]
+\end{equation*}
+
+This is done with the \emph{Matlab} code:
+\begin{lstlisting}[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=none]
+%make list of max of remaining response:
+maxrest = uncut_ir;
+for i = 1:length(maxrest)
+    maxrest(i) = max( abs( uncut_ir(i:end) ) );
+    if maxrest(i) < maxval*sig
+        break; %stop here, i is now the index, where all samples [i:inf[ < max
+    end
+end
+\end{lstlisting}
+
+This gives an ``effective'' length of $134$ samples. (Had we chosen a
+buttersworth filter instead this would have been $146$ samples).
+
+We now use a rectangular window to cut the impulseresponse at $100\%$, $75\%$,
+$60\%$, $40\%$ and $10\%$ of the original. The frequency response of the filter
+with these impulseresponses as kernes are shown in fig. \ref{1-1-cut-fresponse}
+
+\stdfignoscale{1-1-cut-fresponse}{ blablabla }{1-1-cut-fresponse}
+
+It is quite clear that neither of the filters meet the requirements. As the
+impulse length is shortend there, surprisingly, is not that big of a difference
+in the filter, until somewhere between $40\%$ and $10\%$ of the length.
+
+
+Using a hann window, however, we can manipulate the filter respons to get much
+closer to the requirements - all without changing the length of the filter.
+When applying the window it is important to notice, that the impulse response is
+already causal and $x[i] = 0$ for $i<0$, so we only have to apply half of the
+window.
+
+
+\stdfignoscale{1-1-cut-window-fresponse}{ blablabla }{1-1-cut-window-fresponse}

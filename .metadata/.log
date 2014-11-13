@@ -2280,3 +2280,79 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.resources 4 2 2014-11-12 21:20:36.496
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while moving resources.
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1642)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1598)
+	at net.sourceforge.texlipse.builder.OutputFileManager.moveFiles(OutputFileManager.java:277)
+	at net.sourceforge.texlipse.builder.OutputFileManager.access$5(OutputFileManager.java:231)
+	at net.sourceforge.texlipse.builder.OutputFileManager$4.run(OutputFileManager.java:489)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at net.sourceforge.texlipse.builder.OutputFileManager.restoreTempFiles(OutputFileManager.java:487)
+	at net.sourceforge.texlipse.builder.OutputFileManager.performBeforeBuild(OutputFileManager.java:600)
+	at net.sourceforge.texlipse.builder.TexlipseBuilder.buildFile(TexlipseBuilder.java:366)
+	at net.sourceforge.texlipse.builder.TexlipseBuilder.build(TexlipseBuilder.java:102)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: File already exists on disk: C:\Users\Soren\Git\31606\handson9\report\main.aux.
+!SUBENTRY 1 org.eclipse.core.resources 4 4 2014-11-12 21:20:36.498
+!MESSAGE Problems encountered while moving resources.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 268 2014-11-12 21:20:36.498
+!MESSAGE File already exists on disk: C:\Users\Soren\Git\31606\handson9\report\main.aux.
+!SUBENTRY 1 org.eclipse.core.filesystem 4 268 2014-11-12 21:20:36.498
+!MESSAGE File already exists on disk: C:\Users\Soren\Git\31606\handson9\report\main.aux.
+
+!ENTRY org.eclipse.core.resources 4 75 2014-11-12 21:20:36.506
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 net.sourceforge.texlipse 4 75 2014-11-12 21:20:36.506
+!MESSAGE Errors running builder 'Latex Builder' on project 'report'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while moving resources.
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1642)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1598)
+	at net.sourceforge.texlipse.builder.OutputFileManager.moveFiles(OutputFileManager.java:277)
+	at net.sourceforge.texlipse.builder.OutputFileManager.access$5(OutputFileManager.java:231)
+	at net.sourceforge.texlipse.builder.OutputFileManager$4.run(OutputFileManager.java:489)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2326)
+	at net.sourceforge.texlipse.builder.OutputFileManager.restoreTempFiles(OutputFileManager.java:487)
+	at net.sourceforge.texlipse.builder.OutputFileManager.performBeforeBuild(OutputFileManager.java:600)
+	at net.sourceforge.texlipse.builder.TexlipseBuilder.buildFile(TexlipseBuilder.java:366)
+	at net.sourceforge.texlipse.builder.TexlipseBuilder.build(TexlipseBuilder.java:102)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: File already exists on disk: C:\Users\Soren\Git\31606\handson9\report\main.aux.
+!SUBENTRY 2 org.eclipse.core.resources 4 4 2014-11-12 21:20:36.506
+!MESSAGE Problems encountered while moving resources.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 268 2014-11-12 21:20:36.506
+!MESSAGE File already exists on disk: C:\Users\Soren\Git\31606\handson9\report\main.aux.
+!SUBENTRY 1 org.eclipse.core.resources 4 4 2014-11-12 21:20:36.506
+!MESSAGE Problems encountered while moving resources.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 268 2014-11-12 21:20:36.506
+!MESSAGE File already exists on disk: C:\Users\Soren\Git\31606\handson9\report\main.aux.

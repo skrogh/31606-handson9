@@ -1,4 +1,4 @@
-\section{\large From bass/treble to an equalizer}
+\section{From bass/treble to an equalizer}
 %For each problem, outline the problem in your own words, your approach, what you did and why you did it.
 The task is to implement a tunable FIR equalizer with five equally spaced (linear scale) bands.
 Using the frequency domain equivalence method the FIR filter coefficients can be determined by defining the magnitude response, transforming to the time-domain, windowing and translating to obtain a causal response. A function that constructs the filter coefficients was implemented where filter order and window type are parameters. The code is shown in Figure~\ref{fig:equalizer5band}.
