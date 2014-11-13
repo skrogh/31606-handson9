@@ -12,10 +12,6 @@
 \FloatBarrier
 \section{The grandparents and DSP}
 \input{3_1}
-\FloatBarrier
-
-\appendix
-\include{appendix}
 %3_2
 
 

@@ -1,0 +1,44 @@
+\section{Source code for tasks}
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/carsten/ha9.m}
+
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/soren/butt.m}
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/soren/ellipt.m}
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/soren/ho9_ex1.m}
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/soren/ho9_ex3.m}
+
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/david/david9.m}
+\lstinputlisting[
+style=Matlab-editor,
+basicstyle=\ttfamily\footnotesize,
+numbers=left]{../src/david/equalizer5band.m}
+
+\section{Time spent and link to repository}
+
+\paragraph{ Time spent }
+\begin{itemize}
+  \item 5h Søren
+  \item 13h Carsten
+  \item 20-25h David
+\end{itemize}
+
+\paragraph{ Repository }
+all sourcecode (including report) is available at:
+\url{ https://github.com/skrogh/31606-handson9 }
